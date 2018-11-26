@@ -34,7 +34,7 @@ endif()
 add_subdirectory(src)
 
 enable_testing()
-include(/home/afterburer/cmake_modules/LibraryTestsGen.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/LibraryTestsGen.cmake)
 library_tests_gen(LIBRARY_NAME "message"
                   CMAKE_CONFIG_FILE_DIR ${CMAKE_INSTALL_PREFIX}/${INSTALL_CMAKEDIR}
                   LIBRARY_EXECUTABLES $<TARGET_FILE:exe_shared> $<TARGET_FILE:exe_static>
